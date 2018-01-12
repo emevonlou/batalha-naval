@@ -27,7 +27,7 @@ void iniciaTabuleiro(char tabuleiro[10][10], char mascara[10][10])
 void exibeTabuleiro(char tabuleiro[10][10], char mascara[10][10])
 {
     int linha, coluna;
-    // Exibe o tabuleiro
+    // Exibe o tabuleiro.
     for (linha = 0; linha < 10; linha++)
     {
         for (coluna = 0; coluna < 10; coluna++)
@@ -41,7 +41,7 @@ void exibeTabuleiro(char tabuleiro[10][10], char mascara[10][10])
 
 void posicionaBarcos(char tabuleiro[10][10])
 {
-    tabuleiro[0][0] = 'B'; // posicionando quatro barquinhos(manualmente).
+    tabuleiro[0][0] = 'B'; // Posicionando quatro barquinhos(manualmente).
     tabuleiro[2][0] = 'B';
     tabuleiro[5][5] = 'B';
     tabuleiro[6][7] = 'B';
@@ -49,15 +49,15 @@ void posicionaBarcos(char tabuleiro[10][10])
 
 void jogo()
 {
-    // variaveis gerais
+    // Variaveis gerais.
     char tabuleiro[10][10], mascara[10][10];
-    int linhaJogada, colunaJogada; // posicao escolhida pelo jogador
-    int estadoDeJogo = 1;          //1 = jogo acontecendo; 0= fim de jogo
+    int linhaJogada, colunaJogada; // Posicao escolhida pelo jogador.
+    int estadoDeJogo = 1;          // 1 = jogo acontecendo; 0= fim de jogo.
 
-    // Navegando em uma matriz- variaveis auxiliares
+    // Navegando em uma matriz- variaveis auxiliares.
     int linha, coluna;
 
-    //inicia o tabuleiro com água
+    // Inicia o tabuleiro com água.
     iniciaTabuleiro(tabuleiro, mascara);
 
     // Posiciona barcos aleatoriamente.
@@ -67,24 +67,24 @@ void jogo()
     {
         limpaTela();
 
-        // Exibe tabuleiro
+        // Exibe tabuleiro.
         exibeTabuleiro(tabuleiro, mascara);
         cout << "\nDigite uma linha: ";
         cin >> linhaJogada;
         cout << "\nDigite uma Coluna: ";
         cin >> colunaJogada;
 
-        //revela o que esta no tabuleiro
+        // Revela o que esta no tabuleiro.
         mascara[linhaJogada][colunaJogada] = tabuleiro[linhaJogada][colunaJogada];
     }
 }
 
 void menuInicial()
 {
-    //opção escolhida pelo usuário
+    // Opção escolhida pelo usuário.
     int opcao = 0;
 
-    //Enquanto o jogador não digita uma opção válida, mostra o menu novamente.
+    // Enquanto o jogador não digita uma opção válida, mostra o menu novamente.
     while (opcao < 1 || opcao > 3)
     {
         limpaTela();
@@ -94,14 +94,14 @@ void menuInicial()
         cout << "3 - sair" << endl;
         cout << "Escolha uma opcao e tecle enter: ";
 
-        // Faz a leitura da opção
+        // Faz a leitura da opção.
         cin >> opcao;
 
-        // Faz algo de acordo com a opção escolhida
+        // Faz algo de acordo com a opção escolhida.
         switch (opcao)
         {
         case 1:
-            //inicia o jogo
+            // Inicia o jogo.
             // cout << "Jogo iniciado" << endl;
             jogo();
             break;
