@@ -89,7 +89,8 @@ void menuInicial()
     while (opcao < 1 || opcao > 3)
     {
         limpaTela();
-        cout << "ALEATORIO" << rand() << endl << endl;
+        // Gerando um numero aleatorio ate 10 com (% 10).
+        cout << "ALEATORIO: " << rand() % 10 << endl << endl; 
         cout << "Bem vindo ao Jogo Batalha Naval!" << endl;
         cout << "1 - Jogar" << endl;
         cout << "2 - Sobre" << endl;
