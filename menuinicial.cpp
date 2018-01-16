@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string>
 #include <stdio.h>
+#include <time.h>
 using namespace std;
 
 void limpaTela()
@@ -88,6 +89,7 @@ void menuInicial()
     while (opcao < 1 || opcao > 3)
     {
         limpaTela();
+        cout << "ALEATORIO" << rand();
         cout << "Bem vindo ao Jogo Batalha Naval!" << endl;
         cout << "1 - Jogar" << endl;
         cout << "2 - Sobre" << endl;
