@@ -89,7 +89,7 @@ void menuInicial()
     while (opcao < 1 || opcao > 3)
     {
         limpaTela();
-        cout << "ALEATORIO" << rand();
+        cout << "ALEATORIO" << rand() << endl << endl;
         cout << "Bem vindo ao Jogo Batalha Naval!" << endl;
         cout << "1 - Jogar" << endl;
         cout << "2 - Sobre" << endl;
