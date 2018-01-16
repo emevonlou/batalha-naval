@@ -33,8 +33,18 @@ void exibeTabuleiro(char tabuleiro[10][10], char mascara[10][10])
     {
         for (coluna = 0; coluna < 10; coluna++)
         {
-            //cout << " " << tabuleiro[linha][coluna];
+            // cout << " " << tabuleiro[linha][coluna];
             cout << " " << mascara[linha][coluna];
+        }
+        cout << endl;
+    }
+
+    for (linha = 0; linha < 10; linha++)
+    {
+        for (coluna = 0; coluna < 10; coluna++)
+        {
+            cout << " " << tabuleiro[linha][coluna];
+            // cout << " " << mascara[linha][coluna];
         }
         cout << endl;
     }
@@ -42,10 +52,18 @@ void exibeTabuleiro(char tabuleiro[10][10], char mascara[10][10])
 
 void posicionaBarcos(char tabuleiro[10][10])
 {
-    tabuleiro[0][0] = 'B'; // Posicionando quatro barquinhos(manualmente).
-    tabuleiro[2][0] = 'B';
-    tabuleiro[5][5] = 'B';
-    tabuleiro[6][7] = 'B';
+    // Coloca dez barcos no tabuleiro.
+    int cont, quantidade = 10;
+    for(cont = 0; cont < quantidade; cont++)
+    {
+        int linhaBarco = rand() % 10; // gera numero aleatorio de zero a nove.
+        int colunaBarco = rand() % 10;
+
+        // Posiciona dez barcos aleatorios.
+        tabuleiro[linhaBarco][colunaBarco] = 'B'; // Posicionando quatro barquinhos(manualmente).
+    }
+
+
 }
 
 void jogo()
@@ -90,7 +108,7 @@ void menuInicial()
     {
         limpaTela();
         // Gerando um numero aleatorio ate 10 com (rand() % 10).
-        cout << "ALEATORIO: " << rand() % 10 << endl << endl; 
+        // cout << "ALEATORIO: " << rand() % 10 << endl << endl; 
         cout << "Bem vindo ao Jogo Batalha Naval!" << endl;
         cout << "1 - Jogar" << endl;
         cout << "2 - Sobre" << endl;
