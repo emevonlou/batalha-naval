@@ -60,8 +60,11 @@ void posicionaBarcos(char tabuleiro[10][10])
         int linhaAleatoria = rand() % 10; // Gera numero aleatorio de zero a nove.
         int colunaAleatoria = rand() % 10;
 
-        // Posiciona dez barcos aleatorios.
+        if(tabuleiro[linhaAleatoria][colunaAleatoria] == 'E')
+        {
+            // Posiciona dez barcos aleatorios.
         tabuleiro[linhaAleatoria][colunaAleatoria] = 'B'; // Posicionando quatro barquinhos(manualmente).
+        }
 
     }
 
