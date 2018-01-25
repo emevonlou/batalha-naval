@@ -55,19 +55,18 @@ void posicionaBarcos(char tabuleiro[10][10])
     // Coloca dez barcos no tabuleiro.
     int cont, quantidade = 10, quantidadePosicionada = 0;
     // Verifica se ja posicionou todos os barcos.
-    while(quantidadePosicionada < quantidade)
+    while (quantidadePosicionada < quantidade)
     {
         int linhaAleatoria = rand() % 10; // Gera numero aleatorio de zero a nove.
         int colunaAleatoria = rand() % 10;
 
-        if(tabuleiro[linhaAleatoria][colunaAleatoria] == 'E')
+        if (tabuleiro[linhaAleatoria][colunaAleatoria] == 'E')
         {
             // Posiciona dez barcos aleatorios.
-        tabuleiro[linhaAleatoria][colunaAleatoria] = 'B'; // Posicionando quatro barquinhos(manualmente).
+            tabuleiro[linhaAleatoria][colunaAleatoria] = 'B'; // Posicionando quatro barquinhos(manualmente).
+                // Aumenta o contador de barcos posicionados.
         }
-
     }
-
 }
 
 void jogo()
