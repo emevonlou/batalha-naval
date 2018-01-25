@@ -65,6 +65,7 @@ void posicionaBarcos(char tabuleiro[10][10])
             // Posiciona dez barcos aleatorios.
             tabuleiro[linhaAleatoria][colunaAleatoria] = 'B'; // Posicionando quatro barquinhos(manualmente).
                 // Aumenta o contador de barcos posicionados.
+                quantidadePosicionada++;
         }
     }
 }
