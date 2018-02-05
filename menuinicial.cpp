@@ -64,8 +64,8 @@ void posicionaBarcos(char tabuleiro[10][10])
         {
             // Posiciona dez barcos aleatorios.
             tabuleiro[linhaAleatoria][colunaAleatoria] = 'B'; // Posicionando quatro barquinhos(manualmente).
-                // Aumenta o contador de barcos posicionados.
-                quantidadePosicionada++;
+            // Aumenta o contador de barcos posicionados.
+            quantidadePosicionada++;
         }
     }
 }
@@ -75,11 +75,11 @@ void jogo()
     // Variaveis gerais.
     char tabuleiro[10][10], mascara[10][10];
     int linhaJogada, colunaJogada; // Posicao escolhida pelo jogador.
-    int estadoDeJogo = 1;          // 1 = jogo acontecendo; 0= fim de jogo.
+    int estadoDeJogo = 1;          // 1 = jogo acontecendo; 0 = fim de jogo.
 
     // Navegando em uma matriz- variaveis auxiliares.
     int linha, coluna;
-
+    int pontos = 0; // Pontuacao do jogador.
     // Inicia o tabuleiro com água.
     iniciaTabuleiro(tabuleiro, mascara);
 
@@ -92,10 +92,18 @@ void jogo()
 
         // Exibe tabuleiro.
         exibeTabuleiro(tabuleiro, mascara);
+
+        cout << "\nPontos: " << pontos << endl;
+
         cout << "\nDigite uma linha: ";
         cin >> linhaJogada;
         cout << "\nDigite uma Coluna: ";
         cin >> colunaJogada;
+
+        if(tabuleiro[linhaJogada][colunaJogada] == 'B')
+        {
+            pontos = pontos + 10;
+        }
 
         // Revela o que esta no tabuleiro.
         mascara[linhaJogada][colunaJogada] = tabuleiro[linhaJogada][colunaJogada];
