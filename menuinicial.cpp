@@ -107,11 +107,6 @@ void jogo()
                 break;
         }
 
-        if(tabuleiro[linhaJogada][colunaJogada] == 'B')
-        {
-            pontos = pontos + 10;
-        }
-
         // Revela o que esta no tabuleiro.
         mascara[linhaJogada][colunaJogada] = tabuleiro[linhaJogada][colunaJogada];
     }
