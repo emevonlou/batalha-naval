@@ -103,6 +103,7 @@ void jogo()
         switch(tabuleiro[linhaJogada][colunaJogada])
         {
             case 'B':
+                pontos = pontos + 10;
                 break;
         }
 
