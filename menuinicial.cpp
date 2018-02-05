@@ -102,7 +102,8 @@ void jogo()
 
         switch(tabuleiro[linhaJogada][colunaJogada])
         {
-            
+            case 'B':
+                break;
         }
 
         if(tabuleiro[linhaJogada][colunaJogada] == 'B')
