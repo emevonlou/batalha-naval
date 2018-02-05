@@ -91,7 +91,7 @@ void jogo()
     // Navegando em uma matriz- variaveis auxiliares.
     int linha, coluna;
     int pontos = 0; // Pontuacao do jogador.
-    string mensagem; // Mensagem de Feedback para o jogador.
+    string mensagem = "Bem vindo ao Jogo!"; // Mensagem de Feedback para o jogador.
     // Inicia o tabuleiro com água.
     iniciaTabuleiro(tabuleiro, mascara);
 
@@ -106,6 +106,7 @@ void jogo()
         exibeTabuleiro(tabuleiro, mascara);
 
         cout << "\nPontos: " << pontos << endl;
+        cout << "\nMensagem: " << mensagem << endl;
 
         cout << "\nDigite uma linha: ";
         cin >> linhaJogada;
