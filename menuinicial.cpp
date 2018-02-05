@@ -73,13 +73,12 @@ void posicionaBarcos(char tabuleiro[10][10])
 void verificaTiro(char tabuleiro[10][10], int linhaJogada, int colunaJogada, int pontos)
 {
     // Verifica quantos pontos adicionar!
-        switch(tabuleiro[linhaJogada][colunaJogada])
-        {
-            case 'B':
-                pontos = pontos + 10;
-                break;
-        }
-
+    switch (tabuleiro[linhaJogada][colunaJogada])
+    {
+    case 'B':
+        pontos = pontos + 10;
+        break;
+    }
 }
 
 void jogo()
