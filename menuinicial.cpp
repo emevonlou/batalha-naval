@@ -70,7 +70,7 @@ void posicionaBarcos(char tabuleiro[10][10])
     }
 }
 
-void verificaTiro(char tabuleiro[10][10], int linhaJogada, int colunaJogada)
+void verificaTiro(char tabuleiro[10][10], int linhaJogada, int colunaJogada, int pontos)
 {
     // Verifica quantos pontos adicionar!
         switch(tabuleiro[linhaJogada][colunaJogada])
@@ -112,7 +112,7 @@ void jogo()
         cout << "\nDigite uma Coluna: ";
         cin >> colunaJogada;
 
-        verificaTiro(tabuleiro, linhaJogada, colunaJogada);
+        verificaTiro(tabuleiro, linhaJogada, colunaJogada, pontos);
 
         // Revela o que esta no tabuleiro.
         mascara[linhaJogada][colunaJogada] = tabuleiro[linhaJogada][colunaJogada];
