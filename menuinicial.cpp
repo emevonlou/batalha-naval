@@ -112,6 +112,8 @@ void jogo()
         cout << "\nDigite uma Coluna: ";
         cin >> colunaJogada;
 
+        verificaTiro(tabuleiro, linhaJogada, colunaJogada);
+
         // Revela o que esta no tabuleiro.
         mascara[linhaJogada][colunaJogada] = tabuleiro[linhaJogada][colunaJogada];
     }
