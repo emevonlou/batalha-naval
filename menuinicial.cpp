@@ -77,7 +77,10 @@ void verificaTiro(char tabuleiro[10][10], int linhaJogada, int colunaJogada, int
     {
     case 'B':
         *pontos = *pontos + 10;
+        *mensagem = "Voce acertou um barco pequeno!";
         break;
+    case 'E':
+        *mensagem = "Voce acertou a agua!";
     }
 }
 
