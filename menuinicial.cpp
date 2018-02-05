@@ -100,6 +100,11 @@ void jogo()
         cout << "\nDigite uma Coluna: ";
         cin >> colunaJogada;
 
+        switch(tabuleiro[linhaJogada][colunaJogada])
+        {
+            
+        }
+
         if(tabuleiro[linhaJogada][colunaJogada] == 'B')
         {
             pontos = pontos + 10;
