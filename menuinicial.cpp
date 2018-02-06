@@ -32,6 +32,7 @@ void exibeTabuleiro(char tabuleiro[10][10], char mascara[10][10])
 {
     // Vetor correspondente à uma cor.
     char blue[] = {0x1b, '1', '2', '3', '2', 'm', 0};
+    cout << blue;
 
     // Mapa indicador de colunas.
     int cont;
