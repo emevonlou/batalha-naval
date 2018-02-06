@@ -103,9 +103,6 @@ void jogo()
     int opcao;                                  // opçoes de fim de jogo.
     string nomeDoJogador;                       // Nome do usuario.
 
-    cout << "Qual seu nome?" << endl;
-    cin >> nomeDoJogador;
-
     // Inicia o tabuleiro com água.
     iniciaTabuleiro(tabuleiro, mascara);
 
@@ -122,9 +119,9 @@ void jogo()
         cout << "\nPontos: " << pontos << ", Tentativas restantes: " << maximoDeTentativas - tentativas << endl;
         cout << "\nMensagem: " << mensagem << endl;
 
-        cout << nomeDoJogador << ",Digite uma linha: ";
+        cout << nomeDoJogador << ", digite uma linha: ";
         cin >> linhaJogada;
-        cout << nomeDoJogador << ",Digite uma Coluna: ";
+        cout << nomeDoJogador << ", digite uma Coluna: ";
         cin >> colunaJogada;
 
         // Verifica o que aconteceu.
@@ -143,6 +140,8 @@ void jogo()
     switch (opcao)
     {
     case 1:
+        cout << "Qual seu nome?" << endl;
+        cin >> nomeDoJogador;
         jogo();
         break;
     case 2:
