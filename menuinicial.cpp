@@ -5,6 +5,9 @@
 #include <time.h>
 using namespace std;
 
+// Cabeçalhos de funções.
+void menuInicial();
+
 void limpaTela()
 {
     system("clear");
@@ -98,6 +101,11 @@ void jogo()
     string mensagem = "Bem vindo ao Jogo!";     // Mensagem de Feedback para o jogador.
     int tentativas = 0, maximoDeTentativas = 5; // Tentativas do jogador.
     int opcao;                                  // opçoes de fim de jogo.
+    string nomeDoJogador;                       // Nome do usuario.
+
+    cout << "Qual seu nome?" << endl;
+    cin >> nomeDoJogador;
+
     // Inicia o tabuleiro com água.
     iniciaTabuleiro(tabuleiro, mascara);
 
@@ -132,14 +140,14 @@ void jogo()
     cout << "3-Sair." << endl;
     cin >> opcao;
 
-    switch(opcao)
+    switch (opcao)
     {
-        case 1:
-            break;
-        case 2:
-            break;
-        case 3:
-            break;
+    case 1:
+        jogo();
+        break;
+    case 2:
+        menuInicial();
+        break;
     }
 }
 
