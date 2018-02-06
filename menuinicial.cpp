@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string>
 #include <stdio.h>
-#include <time.h>
+#include <time.h> // srand();
 using namespace std;
 
 // Cabeçalhos de funções.
@@ -19,7 +19,7 @@ void iniciaTabuleiro(char tabuleiro[10][10], char mascara[10][10])
 
     // Popula o tabuleiro com 'A'
     for (linha = 0; linha < 10; linha++)        // Para linhas
-    {                                           // para cada linha, dá zero, até a nove.
+    {                                           // para cada linha, dá zero, até nove.
         for (coluna = 0; coluna < 10; coluna++) // Para colunas
         {
             tabuleiro[linha][coluna] = 'E';
@@ -203,7 +203,7 @@ void menuInicial()
 
 int main()
 {
-    srand((unsigned)time(NULL)); // Codigo/função para gerar numeros aleatorios
+    srand((unsigned)time(NULL)); // Codigo/função para gerar numeros aleatorios diferentes.
     menuInicial();
 
     return 0;
