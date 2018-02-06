@@ -103,6 +103,7 @@ void jogo()
     int opcao;                                  // opçoes de fim de jogo.
     string nomeDoJogador;                       // Nome do usuario.
 
+    
     // Inicia o tabuleiro com água.
     iniciaTabuleiro(tabuleiro, mascara);
 
@@ -154,6 +155,8 @@ void menuInicial()
 {
     // Opção escolhida pelo usuário.
     int opcao = 0;
+
+    string nomeDoJogador;                       // Nome do usuario.
 
     // Enquanto o jogador não digita uma opção válida, mostra o menu novamente.
     while (opcao < 1 || opcao > 3)
