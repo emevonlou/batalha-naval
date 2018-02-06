@@ -30,6 +30,7 @@ void iniciaTabuleiro(char tabuleiro[10][10], char mascara[10][10])
 
 void exibeTabuleiro(char tabuleiro[10][10], char mascara[10][10])
 {
+    // Vetor correspondente à uma cor.
     char blue[] = {0x1b, '1', '2', '3', '2', 'm', 0};
 
     // Mapa indicador de colunas.
@@ -52,16 +53,16 @@ void exibeTabuleiro(char tabuleiro[10][10], char mascara[10][10])
         }
         cout << endl;
     }
-        for (linha = 0; linha < 10; linha++)
+    for (linha = 0; linha < 10; linha++)
+    {
+        for (coluna = 0; coluna < 10; coluna++)
         {
-            for (coluna = 0; coluna < 10; coluna++)
-            {
-                cout << " " << tabuleiro[linha][coluna];
-                // cout << " " << mascara[linha][coluna];
-            }
-            cout << endl;
+            cout << " " << tabuleiro[linha][coluna];
+            // cout << " " << mascara[linha][coluna];
         }
+        cout << endl;
     }
+}
 
 void posicionaBarcos(char tabuleiro[10][10])
 {
