@@ -96,14 +96,14 @@ void jogo()
     int linha, coluna;
     int pontos = 0;                         // Pontuacao do jogador.
     string mensagem = "Bem vindo ao Jogo!"; // Mensagem de Feedback para o jogador.
-    int tentativas;                         // Tentativas do jogador.
+    int tentativas = 0, maximoDeTentativas = 5;                         // Tentativas do jogador.
     // Inicia o tabuleiro com água.
     iniciaTabuleiro(tabuleiro, mascara);
 
     // Posiciona barcos aleatoriamente.
     posicionaBarcos(tabuleiro);
 
-    while (estadoDeJogo == 1)
+    while (tentativas < maximoDeTentativas)
     {
         limpaTela();
 
