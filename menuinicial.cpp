@@ -110,7 +110,7 @@ void jogo()
         // Exibe tabuleiro.
         exibeTabuleiro(tabuleiro, mascara);
 
-        cout << "\nPontos: " << pontos << endl;
+        cout << "\nPontos: " << pontos << ", Tentativas restantes: " << maximoDeTentativas - tentativas << endl;
         cout << "\nMensagem: " << mensagem << endl;
 
         cout << "\nDigite uma linha: ";
