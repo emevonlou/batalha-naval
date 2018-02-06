@@ -34,6 +34,7 @@ void exibeTabuleiro(char tabuleiro[10][10], char mascara[10][10])
     // Exibe o tabuleiro.
     for (linha = 0; linha < 10; linha++)
     {
+        cout << linha << "-";
         for (coluna = 0; coluna < 10; coluna++)
         {
             // cout << " " << tabuleiro[linha][coluna];
