@@ -40,19 +40,19 @@ void exibeTabuleiro(char tabuleiro[10][10], char mascara[10][10])
     {
         cout << cont;
     }
-    cout << endl;
+    cout << "\n";
 
     int linha, coluna;
     // Exibe o tabuleiro.
     for (linha = 0; linha < 10; linha++)
     {
-        cout << linha << "-";
+        cout << linha << " - ";
         for (coluna = 0; coluna < 10; coluna++)
         {
             // cout << " " << tabuleiro[linha][coluna];
             cout << " " << mascara[linha][coluna];
         }
-        cout << endl;
+        cout << "\n";
     }
     for (linha = 0; linha < 10; linha++)
     {
@@ -61,7 +61,7 @@ void exibeTabuleiro(char tabuleiro[10][10], char mascara[10][10])
             cout << " " << tabuleiro[linha][coluna];
             // cout << " " << mascara[linha][coluna];
         }
-        cout << endl;
+        cout << "\n";
     }
 }
 
