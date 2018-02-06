@@ -77,10 +77,11 @@ void verificaTiro(char tabuleiro[10][10], int linhaJogada, int colunaJogada, int
     {
     case 'B':
         *pontos = *pontos + 10;
-        *mensagem = "Voce acertou um barco pequeno!";
+        *mensagem = "Voce acertou um barco pequeno!(10 pts)";
         break;
     case 'E':
         *mensagem = "Voce acertou a agua!";
+        break;
     }
 }
 
@@ -95,6 +96,7 @@ void jogo()
     int linha, coluna;
     int pontos = 0; // Pontuacao do jogador.
     string mensagem = "Bem vindo ao Jogo!"; // Mensagem de Feedback para o jogador.
+    int tentativas;
     // Inicia o tabuleiro com água.
     iniciaTabuleiro(tabuleiro, mascara);
 
