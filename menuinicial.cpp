@@ -94,9 +94,9 @@ void jogo()
 
     // Navegando em uma matriz- variaveis auxiliares.
     int linha, coluna;
-    int pontos = 0; // Pontuacao do jogador.
+    int pontos = 0;                         // Pontuacao do jogador.
     string mensagem = "Bem vindo ao Jogo!"; // Mensagem de Feedback para o jogador.
-    int tentativas;
+    int tentativas;                         // Tentativas do jogador.
     // Inicia o tabuleiro com água.
     iniciaTabuleiro(tabuleiro, mascara);
 
