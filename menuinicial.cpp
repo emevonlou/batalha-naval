@@ -122,9 +122,9 @@ void jogo()
         cout << "\nPontos: " << pontos << ", Tentativas restantes: " << maximoDeTentativas - tentativas << endl;
         cout << "\nMensagem: " << mensagem << endl;
 
-        cout << "\nDigite uma linha: ";
+        cout << nomeDoJogador << ",Digite uma linha: ";
         cin >> linhaJogada;
-        cout << "\nDigite uma Coluna: ";
+        cout << nomeDoJogador << ",Digite uma Coluna: ";
         cin >> colunaJogada;
 
         // Verifica o que aconteceu.
