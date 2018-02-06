@@ -30,6 +30,13 @@ void iniciaTabuleiro(char tabuleiro[10][10], char mascara[10][10])
 
 void exibeTabuleiro(char tabuleiro[10][10], char mascara[10][10])
 {
+    // Mapa indicador de colunas.
+    int cont;
+    for(cont = 0; cont < 10; cont++)
+    {
+        cout << cont;
+    }
+    
     int linha, coluna;
     // Exibe o tabuleiro.
     for (linha = 0; linha < 10; linha++)
