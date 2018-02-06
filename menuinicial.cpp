@@ -131,6 +131,16 @@ void jogo()
     cout << "2-Ir para o menu." << endl;
     cout << "3-Sair." << endl;
     cin >> opcao;
+
+    switch(opcao)
+    {
+        case 1:
+            break;
+        case 2:
+            break;
+        case 3:
+            break;
+    }
 }
 
 void menuInicial()
