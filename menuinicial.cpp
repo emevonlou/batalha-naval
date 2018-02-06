@@ -94,9 +94,10 @@ void jogo()
 
     // Navegando em uma matriz- variaveis auxiliares.
     int linha, coluna;
-    int pontos = 0;                         // Pontuacao do jogador.
-    string mensagem = "Bem vindo ao Jogo!"; // Mensagem de Feedback para o jogador.
-    int tentativas = 0, maximoDeTentativas = 5;                         // Tentativas do jogador.
+    int pontos = 0;                             // Pontuacao do jogador.
+    string mensagem = "Bem vindo ao Jogo!";     // Mensagem de Feedback para o jogador.
+    int tentativas = 0, maximoDeTentativas = 5; // Tentativas do jogador.
+    int opcao;                                  // opçoes de fim de jogo.
     // Inicia o tabuleiro com água.
     iniciaTabuleiro(tabuleiro, mascara);
 
@@ -125,6 +126,11 @@ void jogo()
         mascara[linhaJogada][colunaJogada] = tabuleiro[linhaJogada][colunaJogada];
         tentativas++;
     }
+    cout << "Fim de jogo! O que deseja fazer?" << endl;
+    cout << "1-Jogar novamente" << endl;
+    cout << "2-Ir para o menu." << endl;
+    cout << "3-Sair." << endl;
+    cin >> opcao;
 }
 
 void menuInicial()
