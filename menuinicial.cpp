@@ -88,7 +88,7 @@ void verificaTiro(char tabuleiro[10][10], int linhaJogada, int colunaJogada, int
     }
 }
 
-void jogo()
+void jogo(string nomeDoJogador)
 {
     // Variaveis gerais.
     char tabuleiro[10][10], mascara[10][10];
@@ -101,9 +101,7 @@ void jogo()
     string mensagem = "Bem vindo ao Jogo!";     // Mensagem de Feedback para o jogador.
     int tentativas = 0, maximoDeTentativas = 5; // Tentativas do jogador.
     int opcao;                                  // opçoes de fim de jogo.
-    string nomeDoJogador;                       // Nome do usuario.
 
-    
     // Inicia o tabuleiro com água.
     iniciaTabuleiro(tabuleiro, mascara);
 
@@ -141,9 +139,7 @@ void jogo()
     switch (opcao)
     {
     case 1:
-        cout << "Qual seu nome?" << endl;
-        cin >> nomeDoJogador;
-        jogo();
+        jogo(nomeDoJogador);
         break;
     case 2:
         menuInicial();
@@ -156,7 +152,7 @@ void menuInicial()
     // Opção escolhida pelo usuário.
     int opcao = 0;
 
-    string nomeDoJogador;                       // Nome do usuario.
+    string nomeDoJogador; // Nome do usuario.
 
     // Enquanto o jogador não digita uma opção válida, mostra o menu novamente.
     while (opcao < 1 || opcao > 3)
@@ -179,7 +175,9 @@ void menuInicial()
         case 1:
             // Inicia o jogo.
             // cout << "Jogo iniciado" << endl;
-            jogo();
+            cout << "Qual seu nome?" << endl;
+            cin >> nomeDoJogador;
+            jogo(nomeDoJogador);
             break;
         case 2:
             cout << "Informacoes do jogo" << endl;
