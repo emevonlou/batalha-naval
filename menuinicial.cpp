@@ -52,7 +52,7 @@ void exibeMapa()
     cout << "\n";
 }
 
-void exibeTabuleiro(char tabuleiro[10][10], char mascara[10][10])
+void exibeTabuleiro(char tabuleiro[10][10], char mascara[10][10], bool mostraGabarito)
 {
     // Vetor correspondente à uma cor.
     char blue[] = { 0x1b, '[', '1', ';', '3', '4', 'm', 0 };
@@ -79,6 +79,17 @@ void exibeTabuleiro(char tabuleiro[10][10], char mascara[10][10])
 
         }
         cout << "\n";
+    }
+    if(mostraGabarito == true)
+    {
+        for(linha = 0; linha < 10; linha++)
+        {
+            for(coluna = 0; coluna < 10; coluna++)
+            {
+                cout << " " << tabuleiro[linha][coluna];
+            }
+            cout << "\n";
+        }
     }
 }    
 
@@ -142,7 +153,7 @@ void jogo(string nomeDoJogador)
         limpaTela();
 
         // Exibe tabuleiro.
-        exibeTabuleiro(tabuleiro, mascara);
+        exibeTabuleiro(tabuleiro, mascara, false);
 
         cout << "\nPontos: " << pontos << ", Tentativas restantes: " << maximoDeTentativas - tentativas << endl;
         cout << "\nMensagem: " << mensagem << endl;
