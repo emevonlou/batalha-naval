@@ -71,21 +71,16 @@ void exibeTabuleiro(char tabuleiro[10][10], char mascara[10][10])
                 case 'E':
                     cout << blue << " " << mascara[linha][coluna] << normal;
                     break;
+                case 'B':
+                    cout << green << " " << mascara[linha][coluna] << normal;
+                default:
+                    cout << " " << mascara[linha][coluna]; 
             }
 
         }
         cout << "\n";
     }
-    for (linha = 0; linha < 10; linha++)
-    {
-        for (coluna = 0; coluna < 10; coluna++)
-        {
-            cout << " " << tabuleiro[linha][coluna];
-            // cout << " " << mascara[linha][coluna];
-        }
-        cout << "\n";
-    }
-}
+}    
 
 void posicionaBarcos(char tabuleiro[10][10])
 {
