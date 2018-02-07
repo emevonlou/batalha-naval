@@ -32,18 +32,18 @@ void exibeMapa()
 {
     // Mapa indicador de colunas.
     int cont;
-    for(cont = 0; cont <10; cont++)
+    for (cont = 0; cont < 10; cont++)
     {
-        if(cont == 0)
+        if (cont == 0)
         {
             cout << "    ";
         }
         cout << cont << " ";
     }
     cout << "\n";
-    for(cont = 0; cont < 10; cont++)
+    for (cont = 0; cont < 10; cont++)
     {
-        if(cont == 0)
+        if (cont == 0)
         {
             cout << "    ";
         }
@@ -55,9 +55,9 @@ void exibeMapa()
 void exibeTabuleiro(char tabuleiro[10][10], char mascara[10][10], bool mostraGabarito)
 {
     // Vetor correspondente à uma cor.
-    char blue[] = { 0x1b, '[', '1', ';', '3', '4', 'm', 0 };
-    char green[] = { 0x1b, '[', '1', ';', '3', '2', 'm', 0 };
-    char normal[] = { 0x1b, '[', '1', ';', '3', '9', 'm', 0 };
+    char blue[] = {0x1b, '[', '1', ';', '3', '4', 'm', 0};
+    char green[] = {0x1b, '[', '1', ';', '3', '2', 'm', 0};
+    char normal[] = {0x1b, '[', '1', ';', '3', '9', 'm', 0};
 
     // Exibe o tabuleiro.
     int linha, coluna;
@@ -66,37 +66,37 @@ void exibeTabuleiro(char tabuleiro[10][10], char mascara[10][10], bool mostraGab
         cout << linha << " - ";
         for (coluna = 0; coluna < 10; coluna++)
         {
-            switch(mascara[linha][coluna])
+            switch (mascara[linha][coluna])
             {
-                case 'E':
-                    cout << blue << " " << mascara[linha][coluna] << normal;
-                    break;
-                case 'B':
-                    cout << green << " " << mascara[linha][coluna] << normal;
-                default:
-                    cout << " " << mascara[linha][coluna]; 
+            case 'E':
+                cout << blue << " " << mascara[linha][coluna] << normal;
+                break;
+            case 'B':
+                cout << green << " " << mascara[linha][coluna] << normal;
+            default:
+                cout << " " << mascara[linha][coluna];
             }
-
         }
         cout << "\n";
     }
-    if(mostraGabarito == true)
+    if (mostraGabarito == true)
     {
-        for(linha = 0; linha < 10; linha++)
+        for (linha = 0; linha < 10; linha++)
         {
-            for(coluna = 0; coluna < 10; coluna++)
+            for (coluna = 0; coluna < 10; coluna++)
             {
                 cout << " " << tabuleiro[linha][coluna];
             }
             cout << "\n";
         }
     }
-}    
+}
 
 void posicionaBarcos(char tabuleiro[10][10])
 {
     // Coloca dez barcos no tabuleiro.
     int cont, quantidade = 10, quantidadePosicionada = 0;
+
     // Verifica se ja posicionou todos os barcos.
     while (quantidadePosicionada < quantidade)
     {
@@ -107,6 +107,7 @@ void posicionaBarcos(char tabuleiro[10][10])
         {
             // Posiciona dez barcos aleatorios.
             tabuleiro[linhaAleatoria][colunaAleatoria] = 'B'; // Posicionando quatro barquinhos(manualmente).
+
             // Aumenta o contador de barcos posicionados.
             quantidadePosicionada++;
         }
