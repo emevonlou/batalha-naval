@@ -36,7 +36,7 @@ void exibeMapa()
     {
         if(cont == 0)
         {
-            cout << "     ";
+            cout << "    ";
         }
         cout << cont << " ";
     }
@@ -45,7 +45,7 @@ void exibeMapa()
     {
         if(cont == 0)
         {
-            cout << "     ";
+            cout << "    ";
         }
         cout << "|";
     }
