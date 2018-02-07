@@ -30,26 +30,27 @@ void iniciaTabuleiro(char tabuleiro[10][10], char mascara[10][10])
 
 void exibeMapa()
 {
-    // Mapa indicador de colunas.
+    //Mapa indicador de colunas
     int cont;
-    for (cont = 0; cont < 10; cont++)
+    for(cont = 0; cont < 10; cont++)
     {
-        if (cont == 0)
+        if(cont == 0)
         {
-            cout << "    ";
+            cout << "     ";
         }
         cout << cont << " ";
     }
     cout << "\n";
-    for (cont = 0; cont < 10; cont++)
+    for(cont = 0; cont < 10; cont++)
     {
-        if (cont == 0)
+        if(cont == 0)
         {
-            cout << "    ";
+            cout << "     ";
         }
-        cout << "|";
+        cout << "| ";
     }
     cout << "\n";
+
 }
 
 void exibeTabuleiro(char tabuleiro[10][10], char mascara[10][10], bool mostraGabarito)
