@@ -153,11 +153,19 @@ void jogo(string nomeDoJogador)
     {
         limpaTela();
 
+        // Exibe o mapa de indicações.
+        exibeMapa();
+
         // Exibe tabuleiro.
         exibeTabuleiro(tabuleiro, mascara, false);
 
         cout << "\nPontos: " << pontos << ", Tentativas restantes: " << maximoDeTentativas - tentativas << endl;
         cout << "\nMensagem: " << mensagem << endl;
+
+        // Verificação de dados.
+        linhaJogada = -1;
+        colunaJogada = -1;
+
 
         cout << nomeDoJogador << ", digite uma linha: ";
         cin >> linhaJogada;
