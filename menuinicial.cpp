@@ -23,34 +23,56 @@ void iniciaTabuleiro(char tabuleiro[10][10], char mascara[10][10])
         for (coluna = 0; coluna < 10; coluna++) // Para colunas
         {
             tabuleiro[linha][coluna] = 'E';
-            mascara[linha][coluna] = '*'; // Adicionando o simbolo de asterisco na masc
+            mascara[linha][coluna] = '*'; // Adicionando o simbolo de asterisco na masc.
         }
     }
+}
+
+void exibeMapa()
+{
+    // Mapa indicador de colunas.
+    int cont;
+    for(cont = 0; cont <10; cont++)
+    {
+        if(cont == 0)
+        {
+            cout << "     ";
+        }
+        cout << cont << " ";
+    }
+    cout << "\n";
+    for(cont = 0; cont < 10; cont++)
+    {
+        if(cont == 0)
+        {
+            cout << "     ";
+        }
+        cout << "|";
+    }
+    cout << "\n";
 }
 
 void exibeTabuleiro(char tabuleiro[10][10], char mascara[10][10])
 {
     // Vetor correspondente à uma cor.
     char blue[] = { 0x1b, '[', '1', ';', '3', '4', 'm', 0 };
-    cout << blue;
+    char green[] = { 0x1b, '[', '1', ';', '3', '2', 'm', 0 };
+    char normal[] = { 0x1b, '[', '1', ';', '3', '9', 'm', 0 };
 
-    // Mapa indicador de colunas.
-    int cont;
-    for (cont = 0; cont < 10; cont++)
-    {
-        cout << cont;
-    }
-    cout << "\n";
-
-    int linha, coluna;
     // Exibe o tabuleiro.
+    int linha, coluna;
     for (linha = 0; linha < 10; linha++)
     {
         cout << linha << " - ";
         for (coluna = 0; coluna < 10; coluna++)
         {
-            // cout << " " << tabuleiro[linha][coluna];
-            cout << " " << mascara[linha][coluna];
+            switch(mascara[linha][coluna])
+            {
+                case 'E':
+                    cout << blue << " " << mascara[linha][coluna] << normal;
+                    break;
+            }
+
         }
         cout << "\n";
     }
