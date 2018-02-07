@@ -166,14 +166,14 @@ void jogo(string nomeDoJogador)
         linhaJogada = -1;
         colunaJogada = -1;
 
-        while(linhaJogada < 0 || colunaJogada < 0 || (linhaJogada > 9 || colunaJogada > 9))
+        while (linhaJogada < 0 || colunaJogada < 0 || (linhaJogada > 9 || colunaJogada > 9))
         {
             cout << nomeDoJogador << ", digite uma linha: ";
             cin >> linhaJogada;
             cout << nomeDoJogador << ", digite uma Coluna: ";
             cin >> colunaJogada;
         }
-        
+
         // Verifica o que aconteceu.
         verificaTiro(tabuleiro, linhaJogada, colunaJogada, &pontos, &mensagem);
 
